@@ -36,20 +36,53 @@ const Navbar = () => {
         </div>
         <div className={`sidebar ${isOpen ? "open" : ""}`}>
           <ul>
-            <li>Element 1</li>
-            <li>Element 2</li>
-            <li>Element 3</li>
+            <li>
+              <LiaClipboardListSolid />
+              <span>Dashboard</span>
+            </li>
+            <li>
+              <BiSolidAnalyse />
+              <span>Reports</span>
+            </li>
+            <li>
+              <FaCalculator />
+              <span>Calculations</span>
+            </li>
+            <li>
+              <IoWalletOutline />
+              <span>Transactions</span>
+            </li>
+            <li>
+              <MdOutlineSell />
+              <span>Marketplace</span>
+            </li>
           </ul>
         </div>
       </div>
-      <div className="date">
-        <button onClick={handlePreviousMonth}>
-          <FaChevronLeft />
-        </button>
-        <span>{currentDate.format("MMMM, YYYY")}</span>
-        <button onClick={handleNextMonth}>
-          <FaChevronRight />
-        </button>
+      <div className="nav__content">
+        <div className="date">
+          <button onClick={handlePreviousMonth}>
+            <FaChevronLeft />
+          </button>
+          <span>{currentDate.format("MMMM, YYYY")}</span>
+          <button onClick={handleNextMonth}>
+            <FaChevronRight />
+          </button>
+        </div>
+        <div className="verces">
+          <div className="verce">
+            <p className="verce__name">EXPENSE</p>
+            <li className="verce__amount red">лв0.00</li>
+          </div>
+          <div className="verce">
+            <p className="verce__name">INCOME</p>
+            <li className="verce__amount">лв0.00</li>
+          </div>
+          <div className="verce">
+            <p className="verce__name">BALANCE</p>
+            <li className="verce__amount">лв0.00$</li>
+          </div>
+        </div>
       </div>
       <nav className="navbar">
         <ul className="nav__links">
