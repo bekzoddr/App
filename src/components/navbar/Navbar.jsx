@@ -6,6 +6,7 @@ import { IoWalletOutline } from "react-icons/io5";
 import { MdOutlineSell } from "react-icons/md";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import dayjs from "dayjs";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,26 +87,26 @@ const Navbar = () => {
       </div>
       <nav className="navbar">
         <ul className="nav__links">
-          <li className="nav__link">
+          <NavLink className="nav__link" to="/">
             <LiaClipboardListSolid />
             <span>Home</span>
-          </li>
-          <li className="nav__link">
+          </NavLink>
+          <NavLink className="nav__link" to="/analysis">
             <BiSolidAnalyse />
             <span>Analysis</span>
-          </li>
-          <li className="nav__link">
+          </NavLink>
+          <NavLink className="nav__link" to="/">
             <FaCalculator />
             <span>Calculator</span>
-          </li>
-          <li className="nav__link">
+          </NavLink>
+          <NavLink className="nav__link" to="/">
             <IoWalletOutline />
             <span>Budget</span>
-          </li>
-          <li className="nav__link">
+          </NavLink>
+          <NavLink className="nav__link" to="/">
             <MdOutlineSell />
             <span>Sell</span>
-          </li>
+          </NavLink>
         </ul>
       </nav>
     </>
