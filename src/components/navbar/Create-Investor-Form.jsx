@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { ImCancelCircle } from "react-icons/im";
 const Form = ({ isOpen, closeModal }) => {
   const [formData, setFormData] = useState({
     name: "",
@@ -30,8 +30,11 @@ const Form = ({ isOpen, closeModal }) => {
   return (
     <>
       {isOpen && (
-        <div className="modal-overlay" onClick={closeModal}>
+        <div clImCancelCircleck={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button type="button" className="cancel" onClick={closeModal}>
+              <ImCancelCircle size={25} />
+            </button>
             <form className="investor-form" onSubmit={handleSubmit}>
               <label>
                 Investor Name:
@@ -124,9 +127,6 @@ const Form = ({ isOpen, closeModal }) => {
                 />
               </label>
               <button type="submit">Submit</button>
-              <button type="button" onClick={closeModal}>
-                Close
-              </button>
             </form>
           </div>
         </div>
